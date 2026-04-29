@@ -1,0 +1,27 @@
+# Resultados (no versionados)
+Resultados/
+scr/Resultados/
+salidas_estaciones/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# IDE / editores
+.vscode/
+.idea/
+.spyproject/
+*.swp
+*~
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Notebooks
+.ipynb_checkpoints/
