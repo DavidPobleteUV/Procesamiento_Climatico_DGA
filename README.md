@@ -11,7 +11,7 @@ Procesamiento_Clima/
 ├── Data/                 # Series de entrada (DGA: PP y Q diarios)
 ├── Resultados/           # Salidas (no versionado)
 ├── scr/
-│   ├── graf_Dga.py                  # Análisis estación por estación (PP o Q)
+│   ├── procesamiento_datos_DGA.py                  # Análisis estación por estación (PP o Q)
 │   └── annual_plots_cuenca_gcm.py   # Series anuales de GCMs vs referencia
 └── README.md
 ```
@@ -26,7 +26,7 @@ Python ≥ 3.10 (usa anotaciones modernas y `tick_labels` de matplotlib ≥ 3.9)
 
 ---
 
-## 1) `scr/graf_Dga.py`
+## 1) `scr/procesamiento_datos_DGA.py`
 
 Procesa series **diarias DGA** y, por cada estación seleccionada, genera:
 
@@ -54,23 +54,23 @@ Sin argumentos, el script:
 3. Lista las estaciones del archivo y pide elegir.
 
 ```bash
-python scr/graf_Dga.py
+python scr/procesamiento_datos_DGA.py
 ```
 
 ### Uso no interactivo / CLI
 
 ```bash
 # Tipo y archivo explícitos
-python scr/graf_Dga.py --tipo pp --archivo Data/pp_diarias_historico_5.txt
+python scr/procesamiento_datos_DGA.py --tipo pp --archivo Data/pp_diarias_historico_5.txt
 
 # Tipo + selección de estaciones
-python scr/graf_Dga.py --tipo q --estaciones "COLLIGUAY,PICHIDANGUI"
+python scr/procesamiento_datos_DGA.py --tipo q --estaciones "COLLIGUAY,PICHIDANGUI"
 
 # Carpeta alternativa de búsqueda
-python scr/graf_Dga.py --tipo et0 --data_dir /otra/ruta
+python scr/procesamiento_datos_DGA.py --tipo et0 --data_dir /otra/ruta
 
 # Totalmente automatizado (primer archivo compatible, estaciones predefinidas)
-python scr/graf_Dga.py --tipo pp --no_interactivo
+python scr/procesamiento_datos_DGA.py --tipo pp --no_interactivo
 ```
 
 Selección de estaciones: acepta números, nombres, o mezcla separada por comas.
